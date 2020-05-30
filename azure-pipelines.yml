@@ -6,11 +6,11 @@ variables:
   tag: '$(Build.BuildId)'
 
 stages:
-- stage: 'Build and push'
+- stage: 'Build'
   displayName: 'Build the web application'
   jobs: 
   - job: 'Build'
-    displayName: 'Build job'
+    displayName: 'Build and push'
     pool:
       vmImage: 'ubuntu-16.04'
       demands:
